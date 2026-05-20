@@ -33,7 +33,7 @@ Introduction, Common UI overview, C++ project setup, and project support workflo
 - Keep `README.md` and `ProjectLog.md` updated as the project documentation entry points.
 
 **Progress checklist**
-- [ ] Confirm the Unreal project opens from `ownueui.uproject`.
+- [x] Confirm the Unreal project opens from `ownueui.uproject`.
 - [x] Review the generated C++ module under `Source/ownueui`.
 - [x] Confirm baseline config files exist under `Config`.
 - [x] Keep `README.md` and `ProjectLog.md` as documentation entry points.
@@ -73,8 +73,8 @@ Set up test map, frontend player controller, view target, primary layout widget,
 
 **Progress checklist**
 - [x] Set up `Content/Maps/FrontEndTestMap.umap`.
-- [ ] Create a frontend player controller.
-- [ ] Configure a frontend view target or camera.
+- [x] Create a frontend player controller.
+- [x] Configure a frontend view target or camera.
 - [ ] Create the primary layout widget.
 - [ ] Define widget stack gameplay tags.
 - [ ] Create the frontend UI subsystem.
