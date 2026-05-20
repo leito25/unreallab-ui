@@ -101,43 +101,43 @@ UnrealGame-LinuxArm64-Shipping:
 UnrealGame: UnrealGame-Linux-Development
 
 ownueui-Android-DebugGame:
-	 $(BUILD) ownueui Android DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui Android DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-Android-Development:
-	 $(BUILD) ownueui Android Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui Android Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-Android-Shipping:
-	 $(BUILD) ownueui Android Shipping  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui Android Shipping  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-Linux-DebugGame:
-	 $(BUILD) ownueui Linux DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui Linux DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-Linux-Development:
-	 $(BUILD) ownueui Linux Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui Linux Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-Linux-Shipping:
-	 $(BUILD) ownueui Linux Shipping  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui Linux Shipping  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-LinuxArm64-DebugGame:
-	 $(BUILD) ownueui LinuxArm64 DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui LinuxArm64 DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-LinuxArm64-Development:
-	 $(BUILD) ownueui LinuxArm64 Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui LinuxArm64 Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui-LinuxArm64-Shipping:
-	 $(BUILD) ownueui LinuxArm64 Shipping  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueui LinuxArm64 Shipping  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueui: ownueui-Linux-Development
 
 ownueuiEditor-Linux-DebugGame:
-	 $(BUILD) ownueuiEditor Linux DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueuiEditor Linux DebugGame  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueuiEditor-Linux-Development:
-	 $(BUILD) ownueuiEditor Linux Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" $(ARGS)
+	 $(BUILD) ownueuiEditor Linux Development  -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" $(ARGS)
 
 ownueuiEditor: ownueuiEditor-Linux-Development
 
 configure:
-	$(BUILD) -ProjectFiles -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui/ownueui.uproject" -Game 
+	$(BUILD) -ProjectFiles -Project="/home/lquinones/Documents/LeoLab/UEProjects/unreallab-ui/ownueui.uproject" -Game 
 
 .PHONY: $(TARGETS)
