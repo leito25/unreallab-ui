@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Add a dated note to a ProjectLog.md learning session."""
+
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import re
+import sys
+from pathlib import Path
+
+
+SESSION_RE = re.compile(r"^### Session\s+(\d+)\b", re.MULTILINE)
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Add a dated Log notes entry to a ProjectLog.md learning session."
+    )
+    parser.add_argument(
+        "--file",
+        default="ProjectLog.md",
+        help="Path to the project log. Defaults to ProjectLog.md.",
+    )
+    parser.add_argument(
+        "--session",
+        required=True,
+        type=int,
+        help="Learning session number to update, for example 1 or 9.",
+    )
+    parser.add_argument(
+        "--comment",
+        "--detail",
+        required=True,
+        dest="comment",
+        help="Short note/detail to add.",
+    )
+    parser.add_argument(
+        "--date",
+        default=dt.date.today().isoformat(),
+        help="Date for the note. Defaults to today.",
+    )
+    return parser.parse_args()
+
+
+def find_session_bounds(content: str, session_number: int) -> tuple[int, int]:
+    matches = list(SESSION_RE.finditer(content))
+    for index, match in enumerate(matches):
+        if int(match.group(1)) == session_number:
+            start = match.start()
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(content)
+            return start, end
+    raise ValueError(f"Session {session_number:02d} was not found.")
+
+
+def add_note_to_session(session: str, date: str, comment: str) -> str:
+    note = f"- {date} - {comment.strip()}\n"
+
+    log_notes_header = "**Log notes**"
+    if log_notes_header in session:
+        lines = session.splitlines(keepends=True)
+        header_line = next(
+            index for index, line in enumerate(lines) if line.strip() == log_notes_header
+        )
+        next_heading = len(lines)
+        for index in range(header_line + 1, len(lines)):
+            stripped = lines[index].strip()
+            if stripped.startswith("**") and stripped.endswith("**"):
+                next_heading = index
+                break
+
+        insert_at = next_heading
+        while insert_at > header_line + 1 and not lines[insert_at - 1].strip():
+            insert_at -= 1
+
+        lines[insert_at:next_heading] = [note, "\n"]
+        return "".join(lines)
+
+    next_step_header = "**Next step**"
+    next_step_index = session.find(next_step_header)
+    block = f"{log_notes_header}\n{note}\n"
+    if next_step_index != -1:
+        return session[:next_step_index] + block + session[next_step_index:]
+
+    return session.rstrip() + "\n\n" + block
+
+
+def main() -> int:
+    args = parse_args()
+    path = Path(args.file)
+
+    if not path.exists():
+        print(f"error: log file not found: {path}", file=sys.stderr)
+        return 1
+
+    content = path.read_text(encoding="utf-8")
+    try:
+        start, end = find_session_bounds(content, args.session)
+    except ValueError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+
+    updated_session = add_note_to_session(content[start:end], args.date, args.comment)
+    path.write_text(content[:start] + updated_session + content[end:], encoding="utf-8")
+
+    print(f"Added note to Session {args.session:02d} in {path}.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
