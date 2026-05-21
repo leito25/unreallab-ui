@@ -14,4 +14,13 @@ class OWNUEUI_API AFrontendPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
+protected:
+	//virtual void BeginPlay() override; // What Begin to play do!
+	
+	//~ Begin APlayerController Interface
+	virtual void OnPossess(APawn* aPawn) override;
+	//~ End APlayerController Interface
+	
+	
+	
 };
