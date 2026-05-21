@@ -3,6 +3,7 @@
 /.git
 /Intermediate
 /DerivedDataCache
+/.idea
 /Content
 /.vscode
 /scripts
