@@ -75,8 +75,8 @@ Set up test map, frontend player controller, view target, primary layout widget,
 - [x] Set up `Content/Maps/FrontEndTestMap.umap`.
 - [x] Create a frontend player controller.
 - [x] Configure a frontend view target or camera.
-- [ ] Create the primary layout widget.
-- [ ] Define widget stack gameplay tags.
+- [x] Create the primary layout widget.
+- [x] Define widget stack gameplay tags.
 - [ ] Create the frontend UI subsystem.
 
 **What to learn**
