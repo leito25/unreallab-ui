@@ -70,6 +70,8 @@ Set up test map, frontend player controller, view target, primary layout widget,
 - Use `Content/Maps/FrontEndTestMap.umap` as the frontend test map.
 - Define the first version of the frontend flow: test map, player controller, camera/view target, and root UI layout.
 - Plan gameplay tags for UI stacks such as menu, modal, and loading.
+- Add `UWidget_PrimaryLayout` as the root layout class that can register and find Common UI widget stacks by gameplay tag.
+- Document the current frontend possession/view-target flow and the primary layout stack registration methods.
 
 **Progress checklist**
 - [x] Set up `Content/Maps/FrontEndTestMap.umap`.
@@ -77,6 +79,8 @@ Set up test map, frontend player controller, view target, primary layout widget,
 - [x] Configure a frontend view target or camera.
 - [x] Create the primary layout widget.
 - [x] Define widget stack gameplay tags.
+- [x] Add primary layout methods for registering and finding widget stacks by tag.
+- [x] Add code comments for the new controller/layout methods and fields.
 - [ ] Create the frontend UI subsystem.
 
 **What to learn**
@@ -87,6 +91,11 @@ Set up test map, frontend player controller, view target, primary layout widget,
 **Problems / blockers**
 - Confirm whether the Common UI plugin is enabled.
 - Confirm whether the project needs extra module dependencies in `ownueui.Build.cs`.
+
+**Log notes**
+- 2026-05-21 - Implementation: added the primary layout C++ scaffold with gameplay-tag keyed widget stack registration and lookup.
+- 2026-05-21 - Documentation: commented the current `OnPossess`, `FindWidgetStackByTag`, `RegisterWidgetStack`, and registered stack map behavior in code.
+- 2026-05-21 - Summary: connected the frontend controller and primary layout work by documenting how possession sets up the current view flow and how the layout stores Common UI widget stacks for later navigation.
 
 **Next step**
 Add async widget pushing and a first "Press Any Key" screen.

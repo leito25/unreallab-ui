@@ -15,7 +15,8 @@ public class ownueui : ModuleRules
 			"Engine", 
 			"InputCore", 
 			"EnhancedInput",
-			"GameplayTags"
+			"GameplayTags",
+			"UMG",//this is the Unreal Motion Graphics
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
