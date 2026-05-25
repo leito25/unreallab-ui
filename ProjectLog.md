@@ -105,7 +105,7 @@ Add async widget pushing and a first "Press Any Key" screen.
 **Status:** Not started
 
 **Related commits**
-- _None yet._
+- `414b4c7` - Started the Blueprint async action for pushing soft widget classes to tagged widget stacks.
 
 **Course focus**
 Push soft widget to stack asynchronously, Blueprint async action, template layout, Press Any Key screen, animation, developer settings, and frontend function library.
