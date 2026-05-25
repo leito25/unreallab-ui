@@ -449,3 +449,4 @@ Concise per-commit log, oldest to newest. Generated from git history.
 - cf9cf4e - 2026-05-20 11:40:49 -0500 - lquinones - Add README with per-commit changelog
 - 7d62cf2 - 2026-05-20 - lquinones - Simplify README and add ProjectLog with brief per-commit entries
 - `4b9aff3` - Added frontend widget stack registration updates and a debug helper that prints registered stack tags during runtime.
+- `ea80a1c` - Added the frontend UI subsystem, activatable widget base, and soft-widget stack push path with async action scaffolding and project/config wiring.
