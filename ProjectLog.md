@@ -448,3 +448,4 @@ Concise per-commit log, oldest to newest. Generated from git history.
 - 63c2850 - 2026-05-19 17:56:37 -0500 - lquinones - modifying the main scene
 - cf9cf4e - 2026-05-20 11:40:49 -0500 - lquinones - Add README with per-commit changelog
 - 7d62cf2 - 2026-05-20 - lquinones - Simplify README and add ProjectLog with brief per-commit entries
+- `4b9aff3` - Added frontend widget stack registration updates and a debug helper that prints registered stack tags during runtime.
