@@ -107,6 +107,7 @@ Add async widget pushing and a first "Press Any Key" screen.
 **Related commits**
 - `414b4c7` - Started the Blueprint async action for pushing soft widget classes to tagged widget stacks.
 - `11ca509` - Implemented the async soft-widget push action and added a test widget asset.
+- `08ec0af` - Added the Blueprint template layout widget asset.
 
 **Course focus**
 Push soft widget to stack asynchronously, Blueprint async action, template layout, Press Any Key screen, animation, developer settings, and frontend function library.
@@ -119,7 +120,7 @@ Push soft widget to stack asynchronously, Blueprint async action, template layou
 **Progress checklist**
 - [x] Push soft widgets to a stack asynchronously.
 - [x] Create the Blueprint async action.
-- [ ] Create the template layout.
+- [x] Create the template layout.
 - [ ] Create the Press Any Key screen.
 - [ ] Add Press Any Key animation.
 - [ ] Add developer settings for frontend widgets.
@@ -136,6 +137,7 @@ Push soft widget to stack asynchronously, Blueprint async action, template layou
 
 **Log notes**
 - 2026-05-25 - `11ca509` - Implemented `UAsyncAction_PushSoftWidget` so Blueprint can push soft activatable widgets to tagged stacks asynchronously, with pre-push and after-push delegates plus optional focus handling.
+- 2026-05-26 - `08ec0af` - Added `WBP_Template_Layout` as the Blueprint template layout asset for the frontend UI flow.
 
 **Next step**
 Build the main menu using Common UI buttons and input-aware behavior.
