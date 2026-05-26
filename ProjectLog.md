@@ -81,7 +81,7 @@ Set up test map, frontend player controller, view target, primary layout widget,
 - [x] Define widget stack gameplay tags.
 - [x] Add primary layout methods for registering and finding widget stacks by tag.
 - [x] Add code comments for the new controller/layout methods and fields.
-- [ ] Create the frontend UI subsystem.
+- [x] Create the frontend UI subsystem.
 
 **What to learn**
 - Why Common UI uses activatable widgets and widget stacks.
@@ -109,6 +109,7 @@ Add async widget pushing and a first "Press Any Key" screen.
 - `11ca509` - Implemented the async soft-widget push action and added a test widget asset.
 - `08ec0af` - Added the Blueprint template layout widget asset.
 - `58e1050` - Added the Press Any Key widget and connected it to the frontend widget stack.
+- `0da57ec` - Added animation to the Press Any Key screen widget.
 
 **Course focus**
 Push soft widget to stack asynchronously, Blueprint async action, template layout, Press Any Key screen, animation, developer settings, and frontend function library.
@@ -123,7 +124,7 @@ Push soft widget to stack asynchronously, Blueprint async action, template layou
 - [x] Create the Blueprint async action.
 - [x] Create the template layout.
 - [x] Create the Press Any Key screen.
-- [ ] Add Press Any Key animation.
+- [x] Add Press Any Key animation.
 - [ ] Add developer settings for frontend widgets.
 - [ ] Add a frontend function library.
 
@@ -140,6 +141,7 @@ Push soft widget to stack asynchronously, Blueprint async action, template layou
 - 2026-05-25 - `11ca509` - Implemented `UAsyncAction_PushSoftWidget` so Blueprint can push soft activatable widgets to tagged stacks asynchronously, with pre-push and after-push delegates plus optional focus handling.
 - 2026-05-26 - `08ec0af` - Added `WBP_Template_Layout` as the Blueprint template layout asset for the frontend UI flow.
 - 2026-05-26 - `58e1050` - Added `WBP_CAW_PressAnyKey`, a default text style asset, and frontend controller updates that place the Press Any Key screen on the widget stack.
+- 2026-05-26 - `0da57ec` - Added animation to `WBP_CAW_PressAnyKey` for the Press Any Key screen.
 
 **Next step**
 Build the main menu using Common UI buttons and input-aware behavior.
