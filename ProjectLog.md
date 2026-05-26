@@ -110,6 +110,7 @@ Add async widget pushing and a first "Press Any Key" screen.
 - `08ec0af` - Added the Blueprint template layout widget asset.
 - `58e1050` - Added the Press Any Key widget and connected it to the frontend widget stack.
 - `0da57ec` - Added animation to the Press Any Key screen widget.
+- `1519664` - Added frontend developer settings and a function library for resolving configured widget classes by gameplay tag.
 
 **Course focus**
 Push soft widget to stack asynchronously, Blueprint async action, template layout, Press Any Key screen, animation, developer settings, and frontend function library.
@@ -125,8 +126,8 @@ Push soft widget to stack asynchronously, Blueprint async action, template layou
 - [x] Create the template layout.
 - [x] Create the Press Any Key screen.
 - [x] Add Press Any Key animation.
-- [ ] Add developer settings for frontend widgets.
-- [ ] Add a frontend function library.
+- [x] Add developer settings for frontend widgets.
+- [x] Add a frontend function library.
 
 **What to learn**
 - Why soft class references help avoid loading every widget immediately.
@@ -142,6 +143,7 @@ Push soft widget to stack asynchronously, Blueprint async action, template layou
 - 2026-05-26 - `08ec0af` - Added `WBP_Template_Layout` as the Blueprint template layout asset for the frontend UI flow.
 - 2026-05-26 - `58e1050` - Added `WBP_CAW_PressAnyKey`, a default text style asset, and frontend controller updates that place the Press Any Key screen on the widget stack.
 - 2026-05-26 - `0da57ec` - Added animation to `WBP_CAW_PressAnyKey` for the Press Any Key screen.
+- 2026-05-26 - `1519664` - Added `UFrontendDeveloperSettings` for configured frontend widget references and `UFrontendFunctionLibrary` for looking up soft widget classes by frontend gameplay tag.
 
 **Next step**
 Build the main menu using Common UI buttons and input-aware behavior.
