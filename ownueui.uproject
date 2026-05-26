@@ -11,7 +11,8 @@
 			"AdditionalDependencies": [
 				"Engine",
 				"CommonUI",
-				"Blutility"
+				"Blutility",
+				"DeveloperSettings"
 			]
 		}
 	],
